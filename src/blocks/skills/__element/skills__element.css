@@ -1,0 +1,9 @@
+.skills__element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    width: 246px;
+    border-radius: 7px;
+    background-color: #989ae9;
+}
