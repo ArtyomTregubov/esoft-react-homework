@@ -1,0 +1,9 @@
+.skills__cards {
+    width: 1000px;
+    height: 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 0 5px;
+    align-items: center;
+    justify-items: center;
+}

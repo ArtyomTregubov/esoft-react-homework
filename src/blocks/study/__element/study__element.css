@@ -1,0 +1,9 @@
+.study__element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 194px;
+    height: 145px;
+    background-color: rgb(247 88 66);
+    border-radius: 10px;
+}
