@@ -1,0 +1,19 @@
+.study__show-less {
+    border: 1px solid #436262;
+    padding: 0;
+    width: 394px;
+    height: 48px;
+    background-color: #adf3f3;;
+    border-radius: 7px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: #436262;
+}
+
+.study__show-less:hover {
+    opacity: 0.8;
+}
+
+.study__show-less:active {
+    transform: scale(0.99);
+}

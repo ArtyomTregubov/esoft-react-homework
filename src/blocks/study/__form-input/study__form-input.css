@@ -1,0 +1,11 @@
+.study__form-input {
+    border: 1px solid #608b8b;
+    padding: 0 0 0 10px;
+    width: 330px;
+    margin: 0 0 5px 0;
+    background-color: #fff;
+    border-radius: 7px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    height: 22px;
+}

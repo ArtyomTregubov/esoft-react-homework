@@ -1,0 +1,10 @@
+.stady__add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 394px;
+    padding: 5px 0 0;
+    border: 1px solid #436262;
+    border-radius: 10px;
+    background-color: #adf3f3;
+}

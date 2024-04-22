@@ -1,0 +1,18 @@
+.study__show-button {
+    border: 0;
+    padding: 0;
+    width: 1000px;
+    background-color: #4a4997;
+    border-radius: 7px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: #fff;
+}
+
+.study__show-button:hover {
+    opacity: 0.9;
+}
+
+.study__show-button:active {
+    transform: scale(0.99);
+}
