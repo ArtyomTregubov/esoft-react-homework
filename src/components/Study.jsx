@@ -1,6 +1,7 @@
 import React from "react";
+import Form from "./Form";
 
-export default function Study({data, firstData, isShow, onShowStudy, onSetStudy}) {
+export default function Study({firstData}) {
 
 const addCard = (e) => {
     e.preventDefault();
@@ -45,7 +46,21 @@ const onCardLess = () => {
     }
     onSetStudy([...moreCard])
 }
+
+const onCardFilter = (more) => {
+    if(more){
+        onCardMore();
+    } else {
+        onCardLess();
+    }
+}
+
+function handleShowStudyClick() {
+    onShow(!isShow);
+  }
  
+const [data, onSetStudy] = React.useState([...firstData])
+const [isShow, onShow] = React.useState(false);
 const [newCompetence, setNewCompetence] = React.useState('');
 const [newLevel, setNewLevel] = React.useState('');
 
@@ -55,7 +70,7 @@ const [newLevel, setNewLevel] = React.useState('');
 
         <button className="study__show-button" 
                 type="button" 
-                onClick={onShowStudy}>{ isShow ? `Скрыть` : `Показать`}</button>
+                onClick={handleShowStudyClick}>{ isShow ? `Скрыть` : `Показать`}</button>
 
             <div className={ isShow ? `study__container_opened` : `study__container`}>
 
@@ -63,55 +78,22 @@ const [newLevel, setNewLevel] = React.useState('');
                 <div className="study__buttons-container">
                     <button 
                         className="study__show-more"
-                        onClick={onCardMore}
+                        onClick={() => onCardFilter(true)}
                     >Изученно более 50%</button>
                      <button 
                         className="study__show-less"
-                        onClick={onCardLess}
+                        onClick={() => onCardFilter(false)}
                      >Изученно менее 50%</button>
                 </div>
                 <div className="stady__competence-image" role="button" onClick={resetStudy}></div>
                 <div className="stady__add-form">
-                    <form action="#" name="add-form" className="stady__main" noValidate>
-
-                        <fieldset className="stady__name-competence">
-                            <input 
-                            type="text" 
-                            name="form-question" 
-                            className="study__form-input"
-                            placeholder="Название компетенции" 
-                            required value={newCompetence} 
-                            minLength="2" 
-                            maxLength="500" 
-                            id="name"
-                            onChange={(e)=>changeCompetence(e)}
-                            />
-                            <span className="study__input-error" id="name-error"></span>
-                        </fieldset>
-
-                        <fieldset className="stady__level-competence">
-                            <input 
-                            type="text" 
-                            name="form-question" 
-                            className="study__form-input"
-                            placeholder="Уровень освоения" 
-                            required value={newLevel} 
-                            minLength="2" 
-                            maxLength="500" 
-                            id="competence"
-                            onChange={(e)=>changeLevel(e)}
-                            />
-                            <span className="study__input-error" id="name-error"></span>
-                        </fieldset>
-
-                        <button 
-                        className="study__add-button" 
-                        type="submit" 
-                        onClick={(e)=>addCard(e)}
-                        >
-                            Добавить компетенцию
-                        </button>
-                    </form>
+                    <Form
+                    newCompetence={newCompetence}
+                    changeCompetence={changeCompetence}
+                    newLevel={newLevel}
+                    changeLevel={changeLevel}
+                    addCard={addCard}
+                    />
                 </div>
             </div>
 

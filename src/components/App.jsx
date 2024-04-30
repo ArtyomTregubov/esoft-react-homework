@@ -27,7 +27,7 @@ const App = () => {
 
     ]
 
-    const [isShowStudy, showStudy] = React.useState(false);
+    
     const [firstData, setFirstData] = React.useState([
 
         {
@@ -92,11 +92,9 @@ const App = () => {
         
     ])
 
-    const [study, setStudy] = React.useState([...firstData])
+    
 
-    function handleShowStudyClick() {
-        showStudy(!isShowStudy);
-      }
+   
 
   return (
     <div className="App">
@@ -104,11 +102,7 @@ const App = () => {
     <main>
         <Skills data={skills}/>
         <Study 
-        data={study}
         firstData={firstData}
-        isShow={isShowStudy}
-        onShowStudy={handleShowStudyClick}
-        onSetStudy={setStudy}
         />
     </main>
     <Footer/>
