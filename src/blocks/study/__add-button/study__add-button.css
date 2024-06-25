@@ -1,0 +1,19 @@
+.study__add-button {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    margin: 0 0 5px 0;
+    background-color: #436262;
+    border-radius: 7px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: #fff;
+}
+
+.study__add-button:hover {
+    opacity: 0.9;
+}
+
+.study__add-button:active {
+    transform: scale(0.99);
+}

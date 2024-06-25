@@ -1,0 +1,4 @@
+.study__buttons-and-form {
+    display: flex;
+    justify-content: space-between;
+}

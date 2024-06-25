@@ -1,0 +1,7 @@
+.stady__competence-image {
+    width: 100px;
+    height: 100px;
+    background-image: url(../../../../public/images/competence_image.jpg);
+    background-size: cover;
+    cursor: pointer;
+}

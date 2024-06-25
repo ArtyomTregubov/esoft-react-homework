@@ -1,9 +1,9 @@
 .study__cards {
     width: 1000px;
-    height: 295x;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
     grid-gap: 5px 5px;
     align-items: center;
     justify-items: center;
+    margin: 5px 0 0;
 }
